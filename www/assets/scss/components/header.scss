@@ -1,24 +1,19 @@
 @import '../config';
 
 .header {
-	position: relative;
-	background-color: $header-bg-color;
-	@media screen and (max-width: $hamburger-breakpoint) {
-		z-index: 1010;
-	}
-
+	position: fixed;
+	width: 100%;
+	background-color: transparent;
+	z-index: 1010;
 	.header__wrapper {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 	}
 }
 
 .headerLogo {
-	.headerLogo__image {
-		max-width: 5rem;
-		width: 100%;
-	}
+	margin-top: 50px;
 }
 
 .headerNavigation {

@@ -1,5 +1,5 @@
 <header class="header">
-	<div class="header__wrapper wrapper">
+	<div class="header__wrapper">
 		<div class="headerLogo">
 			<div class="scene">
 				<div class="cube rotating">
@@ -10,15 +10,28 @@
 			</div>
 		</div>
 		<div class="headerNavigation">
-			{include 'navigation.latte'}
-			<div class="hamburger">
-				<span class="hamburger__label">Menu</span>
-				<div class="hamburger__trigger">
-					<span class="hamburger__trigger--bread-top"></span>
-					<span class="hamburger__trigger--meat"></span>
-					<span class="hamburger__trigger--bread-bottom"></span>
-				</div>
-			</div>
+			<ul class="navigation">
+				<li class="navigation__item navigation__item--hamburger">
+					<a class="navigation__link" href="">
+						<img class="navigation__icon" src="{$basePath}/assets/images/ui/hamburger.png" alt="">
+					</a>
+				</li>
+				<li class="navigation__item  navigation__item--location">
+					<a class="navigation__link" href="#contact">
+						<img class="navigation__icon" src="{$basePath}/assets/images/ui/location.png" alt="">
+					</a>
+				</li>
+				<li class="navigation__item navigation__item--mail">
+					<a class="navigation__link" href="mailto:pradelna@ironcube.cz">
+						<img class="navigation__icon" src="{$basePath}/assets/images/ui/mail.png" alt="">
+					</a>
+				</li>
+				<li class="navigation__item navigation__item--phone">
+					<a class="navigation__link" href="tel:+420777558500">
+						<img class="navigation__icon" src="{$basePath}/assets/images/ui/phone.png" alt="">
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </header>
