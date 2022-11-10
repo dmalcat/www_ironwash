@@ -1,8 +1,8 @@
 @import '../config';
 
-html,
 body {
 	font-size: $base-font-size;
+	font-family: $font-tit;
 	line-height: $base-line-height;
 }
 
@@ -13,6 +13,16 @@ h1, h2, h3, h4, h5 {
 h1 {
 	font-size: $h1-font-size;
 	line-height: 1.25;
+	margin-bottom: 60px;
+	font-family: 'Roboto Slab', serif;
+	&:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 180px;
+		background-color: $blue;
+		margin: 40px auto 0;
+	}
 }
 
 h2 {
@@ -32,6 +42,7 @@ h4 {
 
 p {
 	font-size: $base-paragraph-size;
+	line-height: 1.7;
 }
 
 strong {
