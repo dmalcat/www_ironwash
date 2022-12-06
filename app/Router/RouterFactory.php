@@ -48,6 +48,12 @@ final class RouterFactory
 					'region' 		=> $region
 				]);
 
+				$router->addRoute($basePath . $region . '/nase-sluzby', [
+					'presenter' 	=> 'Services',
+					'action' 		=> 'default',
+					'region' 		=> $region
+				]);
+
 				$router->addRoute($basePath . $region . '/styleguide', [
 					'presenter' 	=> 'Styleguide',
 					'action' 		=> 'default',
