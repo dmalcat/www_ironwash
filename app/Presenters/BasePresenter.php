@@ -34,6 +34,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	/** @var string @persistent */
 	public $region;
 
+	#[Persistent] public ?string $lang = null;
+
 
 	public function startup(): void
 	{
@@ -46,7 +48,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 		// localization
 		$loc = $this->localization;
 		$loc->setRegion($this->getParameter('region', 'cz'));
-		$loc->setLanguage($loc->getRegion() === 'sk' ? 'sk' : 'cs');
+		$loc->setLanguage($loc->getRegion() === 'en' ? 'en' : 'cs');
 	}
 
 
@@ -68,7 +70,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 		});
 
 		$tpl->presets = $this->presets;
-		$tpl->language = $this->localization->getLanguage();
+		$tpl->lang = $this->localization->getLanguage();
 		$tpl->region = $this->localization->getRegion();
 
 		$tpl->contactMail = $this->presets->getValueIfExists('contact.mail') ?: null;

@@ -19,7 +19,7 @@ final class RouterFactory
 		LIVE      = 'live';
 
 	/** @var string[]  */
-	public const    REGIONS = [ 'cz', 'sk' ];
+	public const    REGIONS = [ 'cz', 'en' ];
 
 
 	/**
@@ -69,10 +69,10 @@ final class RouterFactory
 				'region'    => 'cz'
 			], Nette\Routing\Route::ONE_WAY);
 
-			$router->addRoute('//www.domain-name.sk', [
+			$router->addRoute('//www.domain-name.en', [
 				'presenter' => 'Homepage',
 				'action'    => 'default',
-				'region'    => 'sk'
+				'region'    => 'en'
 			], Nette\Routing\Route::ONE_WAY);
 
 			$router->addRoute('//www.domain-name.cz/', [
@@ -81,10 +81,10 @@ final class RouterFactory
 				'region' 		=> 'cz'
 			]);
 
-			$router->addRoute('//www.domain-name.sk/', [
+			$router->addRoute('//www.domain-name.en/', [
 				'presenter' 	=> 'Homepage',
 				'action' 		=> 'default',
-				'region' 		=> 'sk'
+				'region' 		=> 'en'
 			]);
 		}
 
@@ -102,7 +102,7 @@ final class RouterFactory
 			'localhost'                    => self::LOCAL_DEV,
 			'domain-name\.freshdev80\.cz'  => self::DEV_STAGE,
 			'www\.domain-name\.cz'         => self::LIVE,
-			'www\.domain-name\.sk'         => self::LIVE
+			'www\.domain-name\.en'         => self::LIVE
 		];
 
 		$host = $request->getUrl()->getHost();
